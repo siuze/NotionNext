@@ -192,3 +192,12 @@ nav {
 .wl-meta > span {
   @apply dark:bg-gray-800 !important
 }
+.my_header{
+  font-weight: 600
+}
+.my_header_banner{
+  margin-top: 2rem
+}
+.my_passage_info{
+  margin-top: 2rem
+}

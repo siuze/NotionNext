@@ -28,7 +28,7 @@ export default function HeaderArticle({ post, siteInfo }) {
             {post.title}
           </div>
 
-          <section className="flex-wrap shadow-text flex text-sm justify-center mt-2 text-white dark:text-gray-400 font-light leading-8" style="margin-top: 2rem;">
+          <section className="my_passage_info flex-wrap shadow-text flex text-sm justify-center mt-2 text-white dark:text-gray-400 font-light leading-8" >
             <div className='dark:text-gray-200'>
               {post.category && <>
                 <Link href={`/category/${post.category}`} passHref>
