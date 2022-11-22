@@ -1,7 +1,7 @@
 // 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/zh/features/personality
 const BLOG = {
   AUTHOR: '叶修齐', // 作者
-  BIO: '原本山川，极命草木', // 作者简介
+  BIO: '温柔，风色。', // 作者简介
   LINK: 'https://notion.siuze.top', // 网站地址
   KEYWORDS: 'Notion, 博客', // 网站关键词 英文逗号隔开
   NOTION_PAGE_ID:
