@@ -144,7 +144,7 @@ nav {
 }
 
 .shadow-text {
-  text-shadow: 0.1em 0.1em 0.2em black;
+  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.575);
 }
 
 .notion-code-copy-button > svg {
