@@ -17,7 +17,7 @@ export const Fireworks = () => {
    * @param config
    */
 function createFireworks(config) {
-  const defaultColors = ['102, 167, 221', '62, 131, 225', '33, 78, 194']
+  const defaultColors = ["#FF1461", "#18FF92", "#5A87FF", "#FBF38C"]
   const defaultConfig = {
     colors: defaultColors,
     numberOfParticules: 20,
@@ -118,7 +118,7 @@ function createFireworks(config) {
     const p = {
       x,
       y,
-      color: '#000',
+      color: '#F00',
       radius: 0.1,
       alpha: 0.5,
       lineWidth: 6,
