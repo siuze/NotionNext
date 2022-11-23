@@ -101,10 +101,10 @@ const NotionPage = ({ post }) => {
         }
 
         // 相册图片点击不跳转
-        const cards = document.getElementsByClassName('notion-collection-card')
-        for (const e of cards) {
-          e.removeAttribute('href')
-        }
+        // const cards = document.getElementsByClassName('notion-collection-card')
+        // for (const e of cards) {
+        //   e.removeAttribute('href')
+        // }
       }
     }, 800)
   }, [])
