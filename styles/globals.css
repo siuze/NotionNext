@@ -14,7 +14,13 @@ body {
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 body::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
+  background:url(../public/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment:fixed; 
+  background-size: cover;      
+  background-position:50% 50%;
+  /* background: var(--scrollbarBG); */
+
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
@@ -200,11 +206,4 @@ nav {
 }
 .my_passage_info{
   margin-top: 2rem
-}
-body {
-  background:url(../public/background.jpg);
-  background-repeat: no-repeat;
-  background-attachment:fixed; 
-  background-size: cover;      
-  background-position:50% 50%;
 }
