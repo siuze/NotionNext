@@ -1,6 +1,6 @@
 const CONFIG_HEXO = {
   HOME_BANNER_ENABLE: true,
-  HOME_BANNER_GREETINGS: ['无眠的星月，替我长吻你的泪眼。'], // 首页大图标语文字
+  HOME_BANNER_GREETINGS: ['画君年少时，而今君已老。今时新识人，知君旧时好。'], // 首页大图标语文字
 
   HOME_NAV_BUTTONS: false, // 首页是否显示分类大图标按钮
 
@@ -10,7 +10,8 @@ const CONFIG_HEXO = {
   MENU_ARCHIVE: true, // 显示归档
   MENU_SEARCH: true, // 显示搜索
 
-  POST_LIST_COVER: true, // 文章封面
+  POST_LIST_COVER: true, // 列表显示文章封面
+  POST_LIST_COVER_DEFAULT: true, // 封面为空时用站点背景做默认封面
   POST_LIST_SUMMARY: true, // 文章摘要
   POST_LIST_PREVIEW: true, // 读取文章预览
 

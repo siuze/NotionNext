@@ -4,6 +4,7 @@
  */
 import React from 'react'
 import anime from 'animejs'
+import BLOG from 'blog.config'
 
 export const Fireworks = () => {
   React.useEffect(() => {
@@ -17,9 +18,8 @@ export const Fireworks = () => {
    * @param config
    */
 function createFireworks(config) {
-  const defaultColors = ['255, 20, 97', '24, 255, 146', '90, 135, 255', '251, 243, 140']
   const defaultConfig = {
-    colors: defaultColors,
+    colors: BLOG.FIREWORKS_COLOR,
     numberOfParticules: 20,
     orbitRadius: {
       min: 50,
@@ -44,7 +44,7 @@ function createFireworks(config) {
   let pointerY = 0
 
   // sky blue
-  const colors = config.colors || defaultColors
+  const colors = config.colors
 
   const canvasEl = document.querySelector('.fireworks')
   const ctx = canvasEl.getContext('2d')
@@ -118,7 +118,7 @@ function createFireworks(config) {
     const p = {
       x,
       y,
-      color: '#F00',
+      color: `rgba(${colors[anime.random(0, colors.length - 1)]},${anime.random(0.2, 0.8)})`,
       radius: 0.1,
       alpha: 0.5,
       lineWidth: 6,

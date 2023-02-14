@@ -3,9 +3,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 module.exports = withBundleAnalyzer({
-  future: {
-    webpack5: true
-  },
   images: {
     // 图片压缩
     formats: ['image/avif', 'image/webp'],
@@ -14,7 +11,9 @@ module.exports = withBundleAnalyzer({
       'gravatar.com',
       'www.notion.so',
       'avatars.githubusercontent.com',
-      'images.unsplash.com'
+      'images.unsplash.com',
+      'siuze.top',
+      '20001111.xyz'
     ]
   },
   async rewrites() {
