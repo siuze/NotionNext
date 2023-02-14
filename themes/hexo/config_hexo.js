@@ -2,7 +2,7 @@ const CONFIG_HEXO = {
   HOME_BANNER_ENABLE: true,
   HOME_BANNER_GREETINGS: ['画君年少时，而今君已老。今时新识人，知君旧时好。'], // 首页大图标语文字
 
-  HOME_NAV_BUTTONS: false, // 首页是否显示分类大图标按钮
+  HOME_NAV_BUTTONS: true, // 首页是否显示分类大图标按钮
 
   // 菜单配置
   MENU_CATEGORY: true, // 显示分类
