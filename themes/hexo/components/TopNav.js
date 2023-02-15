@@ -8,6 +8,7 @@ import Logo from './Logo'
 import SearchDrawer from './SearchDrawer'
 import TagGroups from './TagGroups'
 import MenuButtonGroupTop from './MenuButtonGroupTop'
+import MenuButtonGroupTopLeft from './MenuButtonGroupTopLeft'
 import MenuList from './MenuList'
 import { useRouter } from 'next/router'
 
@@ -131,6 +132,7 @@ const TopNav = props => {
       <div className='w-full flex justify-between items-center px-4 py-2'>
         <div className='flex'>
          <Logo {...props}/>
+         <MenuButtonGroupTopLeft {...props}/>
         </div>
 
         {/* 右侧功能 */}

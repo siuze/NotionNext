@@ -231,3 +231,6 @@ nav {
 .my-index-card{
 	height: unset !important;
 }
+.my-nav-logo{
+	min-width: fit-content;
+}

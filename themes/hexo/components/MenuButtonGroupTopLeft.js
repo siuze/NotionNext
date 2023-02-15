@@ -3,21 +3,16 @@ import Link from 'next/link'
 import { useGlobal } from '@/lib/global'
 import CONFIG_HEXO from '../config_hexo'
 
-const MenuButtonGroupTop = (props) => {
+const MenuButtonGroupTopLeft = (props) => {
   const { customNav } = props
   const { locale } = useGlobal()
 
   let links = [
-    // { icon: 'fas fa-search', name: locale.NAV.SEARCH, to: '/search', show: CONFIG_HEXO.MENU_SEARCH },
-    // { icon: 'fas fa-archive', name: locale.NAV.ARCHIVE, to: '/archive', show: CONFIG_HEXO.MENU_ARCHIVE },
-    // { icon: 'fas fa-folder', name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_HEXO.MENU_CATEGORY },
+    { icon: 'fas fa-search', name: locale.NAV.SEARCH, to: '/search', show: CONFIG_HEXO.MENU_SEARCH },
+    { icon: 'fas fa-archive', name: locale.NAV.ARCHIVE, to: '/archive', show: CONFIG_HEXO.MENU_ARCHIVE },
+    { icon: 'fas fa-layer-group', name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_HEXO.MENU_CATEGORY },
     // { icon: 'fas fa-tag', name: locale.COMMON.TAGS, to: '/tag', show: CONFIG_HEXO.MENU_TAG }
   ]
-
-  if (customNav) {
-    links = links.concat(customNav)
-  }
-
   return (
     <nav id='nav' className='leading-8 flex justify-center  font-light w-full'>
       {links.map(link => {
@@ -44,4 +39,4 @@ const MenuButtonGroupTop = (props) => {
     </nav>
   );
 }
-export default MenuButtonGroupTop
+export default MenuButtonGroupTopLeft
