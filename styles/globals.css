@@ -212,7 +212,7 @@ nav {
  line-height:1.5 !important;
 }
 .my_header{
-	font-weight: 600
+	/* font-weight: 600 */
   }
 .my_header_banner{
 	margin-top: 2rem;
@@ -232,5 +232,16 @@ nav {
 	height: unset !important;
 }
 .my-nav-logo{
-	min-width: fit-content;
+	/* min-width: fit-content; */
+    flex-direction: row;
+}
+
+.my-icon{
+	margin-left: 20px;
+	height: 20px;
+	margin-bottom: 3px;
+}
+.my-icon-text{
+	min-width: max-content;
+	margin-top: 0px !important;
 }
