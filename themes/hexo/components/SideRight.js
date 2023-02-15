@@ -25,7 +25,7 @@ export default function SideRight(props) {
 
   const { locale } = useGlobal()
   return (
-    <div className={'space-y-4 lg:w-80 lg:pt-0 px-2 pt-4'}>
+    <div className={'my-right-side space-y-4 lg:w-80 lg:pt-0 px-2 pt-4'}>
       <InfoCard {...props} />
       {CONFIG_HEXO.WIDGET_ANALYTICS && <AnalyticsCard {...props} />}
 

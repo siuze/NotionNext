@@ -228,8 +228,8 @@ nav {
 	height: 18rem;
 }
 .my-px-24{
-	padding-left: 4rem;
-	padding-right: 2rem;
+	/* padding-left: 2rem; */
+	/* padding-right: 2rem; */
 }
 .my-index-card{
 	height: unset !important;
@@ -253,4 +253,7 @@ nav {
 }
 .MyPostCardImgShort{
 	max-height: 170px;
+}
+.my-right-side{
+	width: 15rem !important;
 }
