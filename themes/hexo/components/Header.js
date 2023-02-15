@@ -58,7 +58,7 @@ const Header = props => {
           `linear-gradient(rgba(0, 0, 0, 0.03), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0, 0, 0, 0)  ),url("${siteInfo?.pageCover}")`
       }}
     >
-      <div className="absolute flex flex-col h-full items-center justify-center w-full ">
+      <div className="my-header-h absolute flex flex-col h-full items-center justify-center w-full ">
         <div className='my_header text-4xl md:text-5xl text-white shadow-text'>{siteInfo?.title}</div>
         <div className='my_header_banner mt-2 h-12 items-center text-center shadow-text text-white text-lg'>
           <span id='typed'/>

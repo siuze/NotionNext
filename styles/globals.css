@@ -211,11 +211,14 @@ nav {
  font-size:10px !important;
  line-height:1.5 !important;
 }
+.my-header-h{
+	height:110%
+}
 .my_header{
 	/* font-weight: 600 */
   }
 .my_header_banner{
-	margin-top: 2rem;
+	margin-top: 4rem;
 	margin-bottom: 10rem;
   }
 .my_passage_info{
