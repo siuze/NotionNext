@@ -8,7 +8,7 @@ import NotionPage from '@/components/NotionPage'
 const BlogPostCard = ({ post, showSummary, index, siteInfo }) => {
   const showPreview = CONFIG_HEXO.POST_LIST_PREVIEW && post.blockMap
   if (post && !post.page_cover && CONFIG_HEXO.POST_LIST_COVER_DEFAULT) {
-    post.page_cover = siteInfo?.pageCover
+    post.page_cover = '/post_cover/' + Math.floor(Math.random() * (BLOG.RANDOMCOVERNUM + 1)).toString() + '.avif'
   }
   const showPageCover = CONFIG_HEXO.POST_LIST_COVER && post?.page_cover
   return (
@@ -93,7 +93,7 @@ const BlogPostCard = ({ post, showSummary, index, siteInfo }) => {
         </div>
 
         {showPageCover && !showPreview && post?.page_cover && (
-           <div className="flex relative duration-200 cursor-pointer transform overflow-hidden md:w-5/12 ">
+                <div className={[(post.summary!=null)&&(post.summary!='') ? "MyPostCardImg" : "MyPostCardImgShort",' flex relative duration-200 cursor-pointer transform overflow-hidden md:w-5/12 '].join('')}>
                 <Link href={`${BLOG.SUB_PATH}/${post.slug}`} passHref legacyBehavior>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img

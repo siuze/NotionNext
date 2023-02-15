@@ -26,7 +26,7 @@ const FacebookPage = dynamic(
  * @returns {JSX.Element}
  * @constructor
  */
-const LayoutBase = props => {
+const LayoutBasePost = props => {
   const { children, headerSlot, floatSlot, meta, siteInfo } = props
   const [show, switchShow] = useState(false)
   // const [percent, changePercent] = useState(0) // 页面阅读百分比
@@ -69,7 +69,7 @@ const LayoutBase = props => {
       <main id="wrapper" className={ "my-px-24 w-full py-8 md:px-8 lg:px-24 min-h-screen relative"}>
         <div
           id="container-inner"
-          className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'flex-row-reverse' : '') + ' pt-14 w-full mx-auto lg:flex lg:space-x-4 justify-center relative z-10'}
+          className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'flex-row-reverse' : '') + ' w-full mx-auto lg:flex lg:space-x-4 justify-center relative z-10'}
         >
           <div className="w-full max-w-4xl h-full">
             {onLoading ? <LoadingCover /> : children}
@@ -97,4 +97,4 @@ const LayoutBase = props => {
   )
 }
 
-export default LayoutBase
+export default LayoutBasePost

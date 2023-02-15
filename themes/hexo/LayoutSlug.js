@@ -5,6 +5,7 @@ import JumpToCommentButton from './components/JumpToCommentButton'
 import TocDrawer from './components/TocDrawer'
 import TocDrawerButton from './components/TocDrawerButton'
 import LayoutBase from './LayoutBase'
+import LayoutBasePost from './LayoutBasePost'
 import Comment from '@/components/Comment'
 import NotionPage from '@/components/NotionPage'
 import ArticleAdjacent from './components/ArticleAdjacent'
@@ -39,7 +40,7 @@ export const LayoutSlug = props => {
   </>
 
   return (
-    <LayoutBase
+    <LayoutBasePost
       headerSlot={<HeaderArticle {...props} />}
       {...props}
       showCategory={false}
@@ -87,6 +88,6 @@ export const LayoutSlug = props => {
         <TocDrawer post={post} cRef={drawerRight} targetRef={targetRef} />
       </div>
 
-    </LayoutBase>
+    </LayoutBasePost>
   )
 }

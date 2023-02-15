@@ -33,7 +33,7 @@
 .dark-mode .notion code {
   color: rgba(229, 231, 235, 1);
 }
-.token.cdata,
+/* .token.cdata,
 .token.doctype,
 .token.prolog {
   color: rgba(55, 65, 81, 1);
@@ -116,7 +116,7 @@ pre[class*='language-'] > code {
   border-left: 0 none !important;
   box-shadow: none !important;
   background: none !important;
-}
+} */
 /**
  * One Light theme for prism.js
  * Based on Atom's One Light theme: https://github.com/atom/atom/tree/master/packages/one-light-syntax

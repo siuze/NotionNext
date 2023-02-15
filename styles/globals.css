@@ -248,3 +248,9 @@ nav {
 	min-width: max-content;
 	margin-top: 0px !important;
 }
+.MyPostCardImg{
+	max-height: 310px;
+}
+.MyPostCardImgShort{
+	max-height: 170px;
+}
