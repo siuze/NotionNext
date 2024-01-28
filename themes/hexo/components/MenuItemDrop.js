@@ -45,7 +45,7 @@ export const MenuItemDrop = ({ link }) => {
             </Link>}
         {!hasSubMenu && (link?.to.endsWith('search')) &&
             <div
-                className="font-sans pl-2 pr-4 text-white-700 dark:text-white-200 no-underline tracking-widest">
+                className="font-sans pl-2 pr-4 text-white-700 dark:text-white-200 no-underline tracking-widest" style={{cursor: 'pointer'}}>
                 <SearchButton />
             </div>}
         {hasSubMenu && <>
