@@ -25,6 +25,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                 id='blog-post-card'
                 className={`${post.summary ? "MyPostCardImg" : "MyPostCardImgShort"} group  w-full flex justify-between md:flex-row flex-col-reverse ${siteConfig('HEXO_POST_LIST_IMG_CROSSOVER', null, CONFIG) && index % 2 === 1 ? 'md:flex-row-reverse' : ''}
                     overflow-hidden border dark:border-black rounded-xl bg-white dark:bg-hexo-black-gray`}>
+
                 {/* 文字内容 */}
                 <BlogPostCardInfo index={index} post={post} showPageCover={showPageCover} showPreview={showPreview} showSummary={showSummary} />
 
@@ -40,7 +41,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
             </div>
 
         </div>
-		</div>
+        </div>
   )
 }
 

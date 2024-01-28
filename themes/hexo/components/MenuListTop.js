@@ -23,18 +23,18 @@ export const MenuListTop = ({props, position='right'}) => {
   // 如果 开启自定义菜单，则覆盖Page生成的菜单
   if (siteConfig('CUSTOM_MENU')) {
     links = []
-	for (let i = 0; i < customMenu.length; i++) {
-		if (position === 'right'){
-			if (!(customMenu[i].summary) || !(customMenu[i].summary.startsWith('left')) ) {
-				links.push(customMenu[i])
-			}
-		}
-		else{
-			if (customMenu[i].summary && customMenu[i].summary.startsWith('left')) {
-				links.push(customMenu[i])
-			}
-		}
-	  }
+    for (let i = 0; i < customMenu.length; i++) {
+        if (position === 'right'){
+            if (!(customMenu[i].summary) || !(customMenu[i].summary.startsWith('left')) ) {
+                links.push(customMenu[i])
+            }
+        }
+        else{
+            if (customMenu[i].summary && customMenu[i].summary.startsWith('left')) {
+                links.push(customMenu[i])
+            }
+        }
+      }
   }
   for (let i = 0; i < links.length; i++) {
     if (links[i].id !== i) {

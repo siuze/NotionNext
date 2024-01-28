@@ -53,7 +53,7 @@ const CommonHead = ({ meta, children }) => {
                 <link href={siteConfig('COMMENT_WEBMENTION_AUTH')} rel="me" />
             )}
 
-            {JSON.parse(siteConfig('ANALYTICS_BUSUANZI_ENABLE')) && <meta name="referrer" content="no-referrer" />}
+            {JSON.parse(siteConfig('ANALYTICS_BUSUANZI_ENABLE')) && <meta name="referrer" content="no-referrer-when-downgrade" />}
             {meta?.type === 'Post' && (
                 <>
                     <meta

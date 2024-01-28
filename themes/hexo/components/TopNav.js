@@ -136,10 +136,10 @@ const TopNav = props => {
         <div id='sticky-nav' style={{ backdropFilter: 'blur(3px)' }} className={'top-0 duration-300 transition-all text-sm shadow-none fixed bg-none dark:bg-hexo-black-gray dark:text-gray-200 text-black w-full z-20 transform border-transparent dark:border-transparent'}>
             <div className='w-full flex justify-between items-center px-4 py-2'>
                 <div className='flex mr-1 justify-end items-center '>
-					<div className='hidden lg:flex'> 
+                    <div className='hidden lg:flex'> 
                     <Logo {...props} />
-						<MenuListTop  props={{...props}} position={'left'}/></div>
-					
+                        <MenuListTop  props={{...props}} position={'left'}/></div>
+                    
                 </div>
 
                 {/* 右侧功能 */}
@@ -148,6 +148,7 @@ const TopNav = props => {
                     <div onClick={toggleMenuOpen} className='w-8 justify-center items-center h-8 cursor-pointer flex lg:hidden'>
                         {isOpen ? <i className='fas fa-times' /> : <i className='fas fa-bars' />}
                     </div>
+                    {showSearchButton && <SearchButton />}
                 </div>
             </div>
         </div>
