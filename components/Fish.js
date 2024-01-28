@@ -340,6 +340,6 @@ const Fish = () => {
     };
     RENDERER.init()
   });
-  return <div id='flyfish' class='fly-fish' height='200' style={{ position: 'absolute', width: '100%', zIndex: 0 }}></div>
+  return <div id='flyfish' class='fly-fish' height='200' style={{ position: 'absolute', width: '100%', zIndex: 1 }}></div>
 }
 export default Fish
