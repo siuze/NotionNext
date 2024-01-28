@@ -1,2 +1,124 @@
 /* 静态文件导入 自定义样式*/
+@font-face {
+	font-family: "Optima";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Optima"), url("../webfonts/Optima/OPTIMA.woff") format("woff");
+  }
 
+@font-face {
+	font-family: "Optima Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Optima Italic"),
+		url("../webfonts/Optima/Optima_Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Optima Medium";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Optima Medium"),
+		url("../webfonts/Optima/Optima Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Optima Bold";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Optima Bold"), url("../webfonts/Optima/OPTIMA_B.woff") format("woff");
+}
+#theme-fukasawa .sideLeft hr{
+    opacity: .04;
+}
+.fa-info:before {
+    content: "\f05a";
+}
+.my-header-h{
+	height:90%
+}
+.my_header{
+	/* font-weight: 600 */
+  }
+.my_header_banner{
+	margin-top: 4rem;
+	margin-bottom: 10rem;
+  }
+.my_passage_info{
+	margin-top: 2rem
+  }
+.my-article-header{
+	height: 18rem;
+}
+.my-px-24{
+	/* padding-left: 2rem; */
+	/* padding-right: 2rem; */
+}
+.my-index-card{
+	height: unset !important;
+}
+
+.MyPostCardImg{
+	max-height: 310px;
+}
+.MyPostCardImgShort{
+	max-height: 170px;
+}
+.my-right-side{
+	width: 15rem !important;
+}
+#theme-hexo .menu-link {
+	text-decoration: none;
+	background-image: linear-gradient(rgb(99 102 241),rgb(99 102 241));
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 0 2px;
+	transition: background-size 100ms ease-in-out;
+}
+
+#theme-hexo .menu-link:hover {
+	background-size: 100% 2px;
+	color: rgb(99 102 241);
+}
+.nav-text-color{
+	/* color: rgb(240 249 255); */
+}
+.nav-text-color:hover{
+	color: rgb(240 249 255);
+}
+.nav-text-color-scroll{
+	/* color: rgb(240 249 255); */
+}
+.nav-text-color:hover{
+	color: rgb(99 102 241);;
+}
+    /*  菜单下划线动画 */
+#theme-hexo .nav-menu-link {
+	text-decoration: none;
+	background-image: linear-gradient(rgb(240 249 255),rgb(240 249 255));
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 0 2px;
+	transition: background-size 100ms ease-in-out;
+}
+
+#theme-hexo .nav-menu-link:hover {
+	background-size: 100% 2px;
+	/* color: rgb(240 249 255); */
+}
+#theme-hexo .nav-menu-link-scroll {
+	text-decoration: none;
+	background-image: linear-gradient(rgb(99 102 241),rgb(99 102 241));
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 0 2px;
+	transition: background-size 100ms ease-in-out;
+}
+
+#theme-hexo .nav-menu-link-scroll:hover {
+	background-size: 100% 2px;
+	color: rgb(99 102 241);
+}
+.shadow-text {
+	text-shadow: 0.1em 0.1em 0.2em rgb(0 0 0 / 57%);
+  }

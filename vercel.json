@@ -1,5 +1,45 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "headers": []
+  "headers": [
+	{
+		"source": "/static/BR/Build/(.*)\\.data\\.br",
+		"headers": [
+			{
+				"key": "Content-Encoding",
+				"value": "br"
+			},
+			{
+				"key": "Content-Type",
+				"value": "application/octet-stream"
+			}
+		]
+	},
+	{
+		"source": "/static/BR/Build/(.*)\\.js\\.br",
+		"headers": [
+			{
+				"key": "Content-Encoding",
+				"value": "br"
+			},
+			{
+				"key": "Content-Type",
+				"value": "application/javascript"
+			}
+		]
+	},
+	{
+		"source": "/static/BR/Build/(.*)\\.wasm\\.br",
+		"headers": [
+			{
+				"key": "Content-Encoding",
+				"value": "br"
+			},
+			{
+				"key": "Content-Type",
+				"value": "application/wasm"
+			}
+		]
+	}
+]
 }
