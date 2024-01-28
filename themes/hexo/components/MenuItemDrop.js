@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useState,useEffect,useCallback } from 'react'
 import throttle from 'lodash.throttle'
 import { useRouter } from 'next/router'
-
+import SearchButton from './SearchButton'
 export const MenuItemDrop = ({ link }) => {
   const [show, changeShow] = useState(false)
   const [pickColor, setPickColor] = useState("nav-menu-link");
@@ -36,16 +36,20 @@ export const MenuItemDrop = ({ link }) => {
 
   return <div onMouseOver={() => changeShow(true)} onMouseOut={() => changeShow(false)} className={"transform duration-200 hover:scale-110 "+pickColor} >
 
-        {!hasSubMenu &&
+        {!hasSubMenu && !(link?.to.endsWith('search')) &&
             <Link
                 href={link?.to} target={link?.to?.indexOf('http') === 0 ? '_blank' : '_self'}
-                className="font-sans pl-2 pr-4 text-white-700 dark:text-white-200 no-underline tracking-widest pb-1">
+                className="font-sans pl-2 pr-4 text-white-700 dark:text-white-200 no-underline tracking-widest">
                 {link?.icon && <i className={link?.icon}/>} {link?.name}
                 {hasSubMenu && <i className='px-2 fa fa-angle-down'></i>}
             </Link>}
-
+        {!hasSubMenu && (link?.to.endsWith('search')) &&
+            <div
+                className="font-sans pl-2 pr-4 text-white-700 dark:text-white-200 no-underline tracking-widest">
+                <SearchButton />
+            </div>}
         {hasSubMenu && <>
-            <div className='cursor-pointer font-sans pl-2 pr-4 text-white-700 dark:text-white-200 no-underline tracking-widest pb-1'>
+            <div className='cursor-pointer font-sans pl-2 pr-4 text-white-700 dark:text-white-200 no-underline tracking-widest'>
                 {link?.icon && <i className={link?.icon}/>} {link?.name}
                 <i className={`px-2 fa fa-angle-down duration-300  ${show ? 'rotate-180' : 'rotate-0'}`}></i>
             </div>
