@@ -10,6 +10,9 @@ import { useRouter } from 'next/router'
 import throttle from 'lodash.throttle'
 import SideBar from './SideBar'
 import SideBarDrawer from './SideBarDrawer'
+import { siteConfig } from '@/lib/config'
+import SearchButton from './SearchButton'
+import CONFIG from '../config'
 
 let windowTop = 0
 
@@ -26,6 +29,7 @@ const TopNav = props => {
   const router = useRouter()
 
   const [isOpen, changeShow] = useState(false)
+  const showSearchButton = siteConfig('HEXO_MENU_SEARCH',false,CONFIG)
 
   const toggleMenuOpen = () => {
     changeShow(!isOpen)
