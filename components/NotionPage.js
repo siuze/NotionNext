@@ -116,7 +116,23 @@ const NotionPage = ({ post, className }) => {
   if (!post || !post.blockMap) {
     return <>{post?.summary || ''}</>
   }
-
+  // 处理数据库icon渲染错误的问题
+  if (post.blockMap.block) {
+    const keys = Object.keys(post.blockMap.block).reverse()
+    let collectionId = null
+    for (let index = 0; index < keys.length; index++) {
+      if (post.blockMap.block[keys[index]].value && post.blockMap.block[keys[index]].value.collection_id) {
+        collectionId = post.blockMap.block[keys[index]].value.collection_id
+      }
+      if (post.blockMap.block[keys[index]].value && post.blockMap.block[keys[index]].value.type && !(post.blockMap.block[keys[index]].value.collection_id)) {
+        if (post.blockMap.block[keys[index]].value.type === 'collection_view' && collectionId) {
+          console.log(post.blockMap.block[keys[index]])
+          post.blockMap.block[keys[index]].value.id = collectionId
+          collectionId = null
+        }
+      }
+    }
+  }
   return <div id='notion-article' className={`mx-auto overflow-hidden ${className || ''}`}>
     <NotionRenderer
       recordMap={post.blockMap}
@@ -131,7 +147,7 @@ const NotionPage = ({ post, className }) => {
         Tweet
       }} />
 
-      <PrismMac/>
+    <PrismMac />
 
   </div>
 }
