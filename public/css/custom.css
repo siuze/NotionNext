@@ -122,3 +122,12 @@
 .shadow-text {
 	text-shadow: 0.1em 0.1em 0.2em rgb(0 0 0 / 57%);
   }
+.notion-page-link{
+	text-decoration: none !important;
+}
+.no-border-bottom{
+	border-bottom: none !important;
+}
+.notion-collection-header-title {
+	align-items: baseline;
+  }

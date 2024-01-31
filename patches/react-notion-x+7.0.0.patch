@@ -1,0 +1,67 @@
+diff --git a/node_modules/react-notion-x/build/chunk-NQMZYW4I.js b/node_modules/react-notion-x/build/chunk-NQMZYW4I.js
+index ffc8d13..cba73cd 100644
+--- a/node_modules/react-notion-x/build/chunk-NQMZYW4I.js
++++ b/node_modules/react-notion-x/build/chunk-NQMZYW4I.js
+@@ -870,14 +870,22 @@ var PageTitleImpl = (_a) => {
+   if (!((_a2 = block.properties) == null ? void 0 : _a2.title)) {
+     return null;
+   }
+-  return /* @__PURE__ */ React8.createElement("span", __spreadValues({ className: cs("notion-page-title", className) }, rest), /* @__PURE__ */ React8.createElement(
++//   console.log('PageTitleImpl');
++//   console.log(block);
++  if (block.icon_undefined && block.collection_title_only){
++    return /* @__PURE__ */ React8.createElement("span", __spreadValues({ className: cs("notion-page-title", className) }, rest), /* @__PURE__ */ 
++     /* @__PURE__ */ React8.createElement("span", { className: `no-border-bottom notion-page-title-text`, }, /* @__PURE__ */ React8.createElement(Text, { value: (_b2 = block.properties) == null ? void 0 : _b2.title, block })));
++  };
++  return /* @__PURE__ */ React8.createElement("span", __spreadValues({ className: cs("notion-page-title", className) }, rest), /* @__PURE__ */ 
++  React8.createElement(
+     PageIcon,
+     {
+       block,
+       defaultIcon,
+       className: "notion-page-title-icon"
+     }
+-  ), /* @__PURE__ */ React8.createElement("span", { className: "notion-page-title-text" }, /* @__PURE__ */ React8.createElement(Text, { value: (_b2 = block.properties) == null ? void 0 : _b2.title, block })));
++  ),
++   /* @__PURE__ */ React8.createElement("span", { className: `${block.collection_title_only?'no-border-bottom ':''}notion-page-title-text` }, /* @__PURE__ */ React8.createElement(Text, { value: (_b2 = block.properties) == null ? void 0 : _b2.title, block })));
+ };
+ var PageTitle = memo(PageTitleImpl);
+ 
+diff --git a/node_modules/react-notion-x/build/third-party/collection.js b/node_modules/react-notion-x/build/third-party/collection.js
+index 4bb7bb1..f1f1ba3 100644
+--- a/node_modules/react-notion-x/build/third-party/collection.js
++++ b/node_modules/react-notion-x/build/third-party/collection.js
+@@ -3742,11 +3742,20 @@ var PropertyImpl = (props) => {
+   const renderTitleValue = React24.useMemo(
+     () => function FormulaTitle() {
+       if (block && linkToTitlePage) {
++        // console.log("renderTitleValue")
++        // console.log(block)
++        if(!block.content){
++            block.collection_title_only = true
++        }
++        if (!(block.format?.page_icon)){
++            block.icon_undefined = true
++        }
+         return /* @__PURE__ */ React24.createElement(
+           components.PageLink,
+           {
+             className: cs("notion-page-link"),
+-            href: mapPageUrl(block.id)
++            href: (block.content)?mapPageUrl(block.id):undefined,
++            title: (block.properties?.title)?(block.properties.title[0][0]):undefined
+           },
+           /* @__PURE__ */ React24.createElement(PageTitle, { block })
+         );
+@@ -3971,8 +3980,9 @@ var PropertyImpl = (props) => {
+                 className: cs(
+                   `notion-property-${schema.type}-item`,
+                   color && `notion-item-${color}`
+-                )
+-              },
++                ),
++                title: value
++            },
+               value
+             )
+           );
