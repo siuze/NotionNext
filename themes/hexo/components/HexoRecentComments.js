@@ -31,7 +31,7 @@ const HexoRecentComments = (props) => {
                 {locale.COMMON.RECENT_COMMENTS}
             </div>
 
-            {onLoading && <div>Loading...<i className='ml-2 fas fa-spinner animate-spin' /></div>}
+            {onLoading && <div>Loading...<br />首次访问加载时间较长，如果超过半分钟还未自动刷新页面，请尝试手动刷新。<br />也有可能自动刷新之后提示404并跳转回首页，这时可以再次尝试访问该页面，若页面确实存在，则此次应能访问。<i className='ml-2 fas fa-spinner animate-spin' /></div>}
             {!onLoading && comments && comments.length === 0 && <div>No Comments</div>}
             {!onLoading && comments && comments.length > 0 && comments.map((comment) => <div key={comment.objectId} className='pb-2 pl-1'>
                 <div className='dark:text-gray-200 text-sm waline-recent-content wl-content' dangerouslySetInnerHTML={{ __html: comment.comment }} />
