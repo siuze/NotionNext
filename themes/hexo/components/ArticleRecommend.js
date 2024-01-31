@@ -32,7 +32,7 @@ export default function ArticleRecommend({ recommendPosts, siteInfo }) {
                 {recommendPosts.map(post => {
                   const headerImage = post?.pageCoverThumbnail
                     ? post.pageCoverThumbnail
-                    : siteInfo?.pageCover
+                    :  '/post_cover/' + Math.floor(Math.random() * (siteConfig('RANDOMCOVERNUM', null) + 1)).toString() + '.avif'
 
                   return (
                     (<Link

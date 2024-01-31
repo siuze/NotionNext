@@ -30,7 +30,7 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
         {latestPosts.map(post => {
           const selected = currentPath === `${siteConfig('SUB_PATH', '')}/${post.slug}`
 
-          const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCover
+          const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail :  '/post_cover/' + Math.floor(Math.random() * (siteConfig('RANDOMCOVERNUM', null) + 1)).toString() + '.avif'
 
           return (
             (<Link
