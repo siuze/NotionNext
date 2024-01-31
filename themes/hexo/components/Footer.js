@@ -9,6 +9,7 @@ const Footer = ({ title }) => {
   return (
     <footer
       className='relative z-10 dark:bg-black flex-shrink-0 bg-hexo-light-gray justify-center text-center m-auto w-full leading-6  text-gray-600 dark:text-gray-100 text-sm'
+      style={{ marginTop: '30px'}}
     >
       {/* <DarkModeButton/> */}
       <div style={{ position: 'absolute', width: "100%", zIndex: 0 }}>
