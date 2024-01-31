@@ -126,7 +126,6 @@ const NotionPage = ({ post, className }) => {
       }
       if (post.blockMap.block[keys[index]].value && post.blockMap.block[keys[index]].value.type && !(post.blockMap.block[keys[index]].value.collection_id)) {
         if (post.blockMap.block[keys[index]].value.type === 'collection_view' && collectionId) {
-          console.log(post.blockMap.block[keys[index]])
           post.blockMap.block[keys[index]].value.id = collectionId
           collectionId = null
         }
