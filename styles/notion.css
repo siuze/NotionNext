@@ -2040,7 +2040,7 @@ code.language-mermaid {
 }
 
 .notion-external-image {
-  @apply w-6 h-6 mx-3 my-2 !important;
+  /* @apply w-6 h-6 mx-3 my-2 !important; */
 }
 
 /* 表格 #f5f6f8*/

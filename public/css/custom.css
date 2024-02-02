@@ -131,3 +131,52 @@
 .notion-collection-header-title {
 	align-items: baseline;
   }
+.notion-external-title{
+    border-bottom: none !important;
+    text-decoration-line: underline;
+    text-decoration-color: #d6d6d6;
+}
+.notion-list-disc {
+	list-style-type: revert;
+  }
+.notion-external-subtitle{
+	width: auto !important;
+	border-radius: 5px;
+}
+.notion-external-subtitle-item-desc{
+	width: max-content !important;
+}
+.notion-external-subtitle-item-desc-svg{
+	width: 16px;
+	margin-right: 4px;
+	display: inline-flex
+}
+.notion-external-subtitle-item{
+	display: inline-flex
+}
+.notion-external-image-icon{
+	border-radius: 50% !important;
+}
+.notion-external-block {
+	align-items: center;
+	margin-bottom: 2px;
+    margin-top: 2px;
+  }
+.notion-external-subtitle-card{
+	line-height: normal;
+}
+.notion-external-subtitle-item-desc-svg-card{
+    left: 28px;
+    position: absolute;
+    filter: drop-shadow(white 0px 0px 1px) drop-shadow(white 0px 0px 1px) drop-shadow(white 0px 0px 1px);
+    align-items: baseline;
+}
+.notion-external-image-card{
+	margin-right: 20px;
+}
+.notion-external-subtitle-item-name{
+	color: #37352fa6
+}
+.notion-external-subtitle-item-name-card{
+	font-size: 14px;
+}
