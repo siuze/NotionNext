@@ -1,6 +1,19 @@
 /* 静态文件导入 自定义样式*/
 @font-face {
+	font-family: "Iosevka";
+	src: local("Iosevka"), url("../webfonts/iosevka/iosevka.woff2") format("woff2");
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Iosevka Aile Iaso";
+	src: local("Iosevka Aile Iaso"), url("https://cdn.xeiaso.net/static/pkg/iosevka/iosevka-aile-normal.woff2") format("woff2");
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
 	font-family: "Optima";
+	font-display: swap;
 	font-style: normal;
 	font-weight: normal;
 	src: local("Optima"), url("../webfonts/Optima/OPTIMA.woff") format("woff");
@@ -8,6 +21,7 @@
 
 @font-face {
 	font-family: "Optima Italic";
+	font-display: swap;
 	font-style: normal;
 	font-weight: normal;
 	src: local("Optima Italic"),
@@ -16,6 +30,7 @@
 
 @font-face {
 	font-family: "Optima Medium";
+	font-display: swap;
 	font-style: normal;
 	font-weight: normal;
 	src: local("Optima Medium"),
@@ -24,10 +39,12 @@
 
 @font-face {
 	font-family: "Optima Bold";
+	font-display: swap;
 	font-style: normal;
 	font-weight: normal;
 	src: local("Optima Bold"), url("../webfonts/Optima/OPTIMA_B.woff") format("woff");
 }
+
 #theme-fukasawa .sideLeft hr{
     opacity: .04;
 }
@@ -179,4 +196,26 @@
 }
 .notion-external-subtitle-item-name-card{
 	font-size: 14px;
+}
+.notion{
+	font-family: "Iosevka Aile Iaso","HarmonyOS","HarmonyOS_Regular",
+    '"PingFang SC"',
+    '-apple-system',
+    'BlinkMacSystemFont',
+    '"Hiragino Sans GB"',
+    '"Microsoft YaHei"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+    '"Segoe UI"',
+    '"Noto Sans SC"',
+    'HarmonyOS_Regular',
+    '"Helvetica Neue"',
+    'Helvetica',
+    '"Source Han Sans SC"',
+    'Arial',
+    'sans-serif',
+    '"Apple Color Emoji"';
+}
+code[class*=language-], pre[class*=language-]{
+	font-family: Iosevka, "Fira Code","Fira Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace !important;
 }
