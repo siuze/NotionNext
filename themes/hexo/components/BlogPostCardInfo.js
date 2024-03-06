@@ -36,7 +36,7 @@ export const BlogPostCardInfo = ({ post, showPreview, showPageCover, showSummary
                         } flex-wrap dark:text-gray-500 text-gray-400 `}
                 >
                     <Link
-                        href={`/category/${post.category}`}
+                        href={url}
                         passHref
                         className="cursor-pointer font-light text-sm menu-link hover:text-indigo-700 dark:hover:text-indigo-400 transform">
 
@@ -51,9 +51,10 @@ export const BlogPostCardInfo = ({ post, showPreview, showPageCover, showSummary
 
             {/* 摘要 */}
             {(!showPreview || showSummary) && !post.results && (
+            <Link href={`/category/${post.category}`} passHref>
             <main className="line-clamp-2 replace my-3 text-gray-700  dark:text-gray-300 text-sm font-light leading-7">
                 {post.summary}
-            </main>
+            </main></Link>
             )}
 
             {/* 搜索结果 */}

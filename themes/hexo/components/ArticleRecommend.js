@@ -34,7 +34,7 @@ export default function ArticleRecommend({ recommendPosts, siteInfo }) {
                   const headerImage = post?.pageCoverThumbnail
                     ? post.pageCoverThumbnail
                     : '/post_cover/' + Math.floor(Math.random() * (siteConfig('RANDOMCOVERNUM', null) + 1)).toString() + '.avif'
-
+                  const url = checkContainHttp(post.slug) ? sliceUrlFromHttp(post.slug) : `${siteConfig('SUB_PATH', '')}/${post.slug}`
                   return (
                     (<Link
                             key={post.id}
