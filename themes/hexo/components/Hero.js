@@ -58,7 +58,7 @@ const Hero = props => {
 
             <div className="my-header-h text-white absolute bottom-0 flex flex-col h-full items-center justify-center w-full ">
                 {/* 站点标题 */}
-                <div className='my_header text-4xl md:text-5xl shadow-text'>{siteConfig('TITLE').replace(' ',' ')}</div>
+                <div className='my_header text-4xl md:text-5xl shadow-text'>{siteConfig('TITLE').replace(' ', ' ')}</div>
                 {/* 站点欢迎语 */}
                 <div className='my_header_banner mt-2 h-12 items-center text-center font-medium shadow-text text-lg'>
                     <span id='typed' />
