@@ -1,8 +1,6 @@
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import { useRouter } from 'next/router'
-import AlgoliaSearchModal from '@/components/AlgoliaSearchModal'
-import { useRef } from 'react'
 import { useHexoGlobal } from '..'
 
 /**
@@ -12,7 +10,7 @@ import { useHexoGlobal } from '..'
 export default function SearchButton(props) {
   const { locale } = useGlobal()
   const router = useRouter()
-  const { searchModal} = useHexoGlobal()
+  const { searchModal } = useHexoGlobal()
 
   function handleSearch() {
     if (siteConfig('ALGOLIA_APP_ID')) {

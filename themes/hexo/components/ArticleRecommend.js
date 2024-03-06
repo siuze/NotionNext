@@ -3,6 +3,7 @@ import CONFIG from '../config'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import LazyImage from '@/components/LazyImage'
+import { checkContainHttp, sliceUrlFromHttp } from '@/lib/utils'
 
 /**
  * 关联推荐文章
@@ -32,13 +33,13 @@ export default function ArticleRecommend({ recommendPosts, siteInfo }) {
                 {recommendPosts.map(post => {
                   const headerImage = post?.pageCoverThumbnail
                     ? post.pageCoverThumbnail
-                    :  '/post_cover/' + Math.floor(Math.random() * (siteConfig('RANDOMCOVERNUM', null) + 1)).toString() + '.avif'
+                    : '/post_cover/' + Math.floor(Math.random() * (siteConfig('RANDOMCOVERNUM', null) + 1)).toString() + '.avif'
 
                   return (
                     (<Link
                             key={post.id}
                             title={post.title}
-                            href={`${siteConfig('SUB_PATH', '')}/${post.slug}`}
+                            href={url}
                             passHref
                             className="flex h-40 cursor-pointer overflow-hidden">
 

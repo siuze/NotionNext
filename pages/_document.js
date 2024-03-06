@@ -20,7 +20,7 @@ class MyDocument extends Document {
                   </>}
 
                   {BLOG.FONT_URL?.map((fontUrl, index) => {
-                    if (fontUrl.endsWith('.css')) {
+                    if (fontUrl.endsWith('.css') || fontUrl.includes('googleapis.com/css')) {
                       return <link key={index} rel="stylesheet" href={fontUrl} />
                     } else {
                       return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
@@ -29,7 +29,7 @@ class MyDocument extends Document {
                   <meta name="referrer" content="no-referrer" />
                 </Head>
 
-                <body className={`${BLOG.FONT_STYLE} font-light scroll-smooth`}>
+                <body>
                     <Main />
                     <NextScript />
                 </body>
