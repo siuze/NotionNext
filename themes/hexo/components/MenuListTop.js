@@ -3,7 +3,7 @@ import CONFIG from '../config'
 import { siteConfig } from '@/lib/config'
 import { MenuItemDrop } from './MenuItemDrop'
 
-export const MenuListTop = ({props, position='right'}) => {
+export const MenuListTop = ({ props, position = 'right' }) => {
   const { customNav, customMenu } = props
   const { locale } = useGlobal()
 
@@ -16,25 +16,36 @@ export const MenuListTop = ({props, position='right'}) => {
   ]
 
   if (customNav) {
-    links = links.concat(customNav)
-  }
-
-
-  // 如果 开启自定义菜单，则覆盖Page生成的菜单
-  if (siteConfig('CUSTOM_MENU')) {
+    // links = links.concat(customNav)
     links = []
-    for (let i = 0; i < customMenu.length; i++) {
-        if (position === 'right'){
-            if (!(customMenu[i].summary) || !(customMenu[i].summary.startsWith('left')) ) {
-                links.push(customMenu[i])
-            }
+    for (let i = 0; i < customNav.length; i++) {
+      if (position === 'right') {
+        if (!(customNav[i].summary) || !(customNav[i].summary.startsWith('left'))) {
+          links.push(customNav[i])
         }
-        else{
-            if (customMenu[i].summary && customMenu[i].summary.startsWith('left')) {
-                links.push(customMenu[i])
-            }
+      } else {
+        if (customNav[i].summary && customNav[i].summary.startsWith('left')) {
+          links.push(customNav[i])
         }
       }
+    }
+  }
+
+  // 如果 开启自定义菜单，则覆盖Page生成的菜单
+  if (siteConfig('CUSTOM_MENU') && customMenu) {
+    // links = customMenu
+    links = []
+    for (let i = 0; i < customMenu.length; i++) {
+      if (position === 'right') {
+        if (!(customMenu[i].summary) || !(customMenu[i].summary.startsWith('left'))) {
+          links.push(customMenu[i])
+        }
+      } else {
+        if (customMenu[i].summary && customMenu[i].summary.startsWith('left')) {
+          links.push(customMenu[i])
+        }
+      }
+    }
   }
   for (let i = 0; i < links.length; i++) {
     if (links[i].id !== i) {
