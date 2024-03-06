@@ -54,14 +54,14 @@ const BLOG = {
     // 'https://fonts.googleapis.com/css?family=Bitter&display=swap',
     // 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
     // 'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
-	"https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css",
-	"https://s1.hdslb.com/bfs/static/jinkela/long/font/medium.css"
+    'https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css',
+    'https://s1.hdslb.com/bfs/static/jinkela/long/font/medium.css'
 
   ],
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
     // '"LXGW WenKai"',
-    'Optima',"HarmonyOS","HarmonyOS_Regular",
+    'Optima', 'HarmonyOS', 'HarmonyOS_Regular',
     '"PingFang SC"',
     '-apple-system',
     'BlinkMacSystemFont',
@@ -414,28 +414,27 @@ const BLOG = {
 
   // 自定义配置notion数据库字段名
   NOTION_PROPERTY_NAME: {
-    password: process.env.NEXT_PUBLIC_NOTION_PROPERTY_PASSWORD || '密码' ,
+    password: process.env.NEXT_PUBLIC_NOTION_PROPERTY_PASSWORD || 'password',
     type: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE || 'type', // 文章类型，
-    type_post: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_POST || '文章', // 当type文章类型与此值相同时，为博文。
-    type_page: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_PAGE || '页面', // 当type文章类型与此值相同时，为单页。
+    type_post: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_POST || 'Post', // 当type文章类型与此值相同时，为博文。
+    type_page: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_PAGE || 'Page', // 当type文章类型与此值相同时，为单页。
     type_notice:
-          process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_NOTICE || '公告', // 当type文章类型与此值相同时，为公告。
+          process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_NOTICE || 'Notice', // 当type文章类型与此值相同时，为公告。
     type_menu: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_MENU || 'Menu', // 当type文章类型与此值相同时，为菜单。
     type_sub_menu:
           process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_SUB_MENU || 'SubMenu', // 当type文章类型与此值相同时，为子菜单。
-    title: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TITLE || '标题', // 文章标题
-    status: process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS || '状态',
+    title: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TITLE || 'title', // 文章标题
+    status: process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS || 'status',
     status_publish:
-          process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_PUBLISH || '已发布', // 当status状态值与此相同时为发布，可以为中文
+          process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_PUBLISH || 'Published', // 当status状态值与此相同时为发布，可以为中文
     status_invisible:
-          process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_INVISIBLE || '未发布', // 当status状态值与此相同时为隐藏发布，可以为中文 ， 除此之外其他页面状态不会显示在博客上
-    summary: process.env.NEXT_PUBLIC_NOTION_PROPERTY_SUMMARY || '摘要',
-    slug: process.env.NEXT_PUBLIC_NOTION_PROPERTY_SLUG || '路径',
-    category: process.env.NEXT_PUBLIC_NOTION_PROPERTY_CATEGORY || '分类',
-    date: process.env.NEXT_PUBLIC_NOTION_PROPERTY_DATE || '日期',
-    tags: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TAGS || '标签',
-    icon: process.env.NEXT_PUBLIC_NOTION_PROPERTY_ICON || '图标'
-
+          process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_INVISIBLE || 'Invisible', // 当status状态值与此相同时为隐藏发布，可以为中文 ， 除此之外其他页面状态不会显示在博客上
+    summary: process.env.NEXT_PUBLIC_NOTION_PROPERTY_SUMMARY || 'summary',
+    slug: process.env.NEXT_PUBLIC_NOTION_PROPERTY_SLUG || 'slug',
+    category: process.env.NEXT_PUBLIC_NOTION_PROPERTY_CATEGORY || 'category',
+    date: process.env.NEXT_PUBLIC_NOTION_PROPERTY_DATE || 'date',
+    tags: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TAGS || 'tags',
+    icon: process.env.NEXT_PUBLIC_NOTION_PROPERTY_ICON || 'icon'
   },
 
   // RSS订阅
@@ -454,7 +453,7 @@ const BLOG = {
 
   // 作废配置
   AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
-  TITLE: process.env.NEXT_PUBLIC_TITLE || '少年游｜SIU NIENG IU', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
+  TITLE: process.env.NEXT_PUBLIC_TITLE || '少年游｜SIU NIENG IU', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
   HOME_BANNER_IMAGE:
         process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE || '/bg_image.jpg', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
   DESCRIPTION:
