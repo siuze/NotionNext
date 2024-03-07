@@ -108,7 +108,7 @@ export default function AlgoliaSearchModal({ cRef }) {
     }
     setIsLoading(true)
     try {
-      const res = await index.search(query, { page, hitsPerPage: 10 })
+      const res = await index.search(query, { page, hitsPerPage: 5 })
       const { hits, nbHits, nbPages, processingTimeMS } = res
       setUseTime(processingTimeMS)
       setTotalPage(nbPages)
@@ -196,7 +196,7 @@ export default function AlgoliaSearchModal({ cRef }) {
 
         <input
           type="text"
-          placeholder="在这里输入搜索关键词..."
+          placeholder="在这里输入搜索关键词并等待数秒..."
           onChange={e => handleInputChange(e)}
           className="text-black dark:text-gray-200 bg-gray-50 dark:bg-gray-600 outline-blue-500 w-full px-4 my-2 py-1 mb-4 border rounded-md"
           ref={inputRef}
@@ -243,7 +243,7 @@ export default function AlgoliaSearchModal({ cRef }) {
           </div>
           <div className="text-gray-600 dark:text-gray-300  text-right">
             <span >
-              <i className="fa-brands fa-algolia"></i> Algolia 提供搜索服务
+              <i className="fa-brands fa-algolia"></i> Algolia {isLoading ? '已发起搜索……' : '提供搜索服务'}
             </span>
           </div>
         </div>
