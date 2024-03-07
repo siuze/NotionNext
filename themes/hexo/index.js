@@ -294,7 +294,7 @@ const Layout404 = props => {
           })
         }
       }
-    }, 3000)
+    }, siteConfig('POST_WAITING_TIME_FOR_404') * 1000)
   })
   return (
         <>
