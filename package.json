@@ -45,7 +45,8 @@
     "test:ci": "jest --ci --coverage --watchAll=false",
     "health-check": "node scripts/health-check.js",
     "validate": "npm run health-check",
-    "final-validation": "node scripts/final-validation.js"
+    "final-validation": "node scripts/final-validation.js",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@clerk/localizations": "^3.17.1",
@@ -95,7 +96,9 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-junit": "^16.0.0",
     "next-sitemap": "^1.9.12",
+    "patch-package": "^8.0.1",
     "postcss": "^8.5.6",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "^3.6.2",
     "puppeteer": "^24.40.0",
     "tailwindcss": "^3.4.17",
