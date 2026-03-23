@@ -14,7 +14,7 @@ import SearchDrawer from './SearchDrawer'
 import SideBar from './SideBar'
 import SideBarDrawer from './SideBarDrawer'
 import TagGroups from './TagGroups'
-
+import { useHexoGlobal } from '../index'
 let windowTop = 0
 
 /**
@@ -23,6 +23,7 @@ let windowTop = 0
  * @returns
  */
 const Header = props => {
+  const { searchModal } = useHexoGlobal()
   const searchDrawer = useRef()
   const { tags, currentTag, categories, currentCategory } = props
   const { locale } = useGlobal()
@@ -158,13 +159,17 @@ const Header = props => {
             <Logo {...props} />
             <div className='hidden md:flex items-center ml-4 space-x-5 text-lg'>
 
-              <SmartLink title="文章归档" href="/archive" className='hover:scale-110 transition-all duration-200 cursor-pointer opacity-80 hover:opacity-100'>
+              <SmartLink title="文章归档" href="/archive" className='hover:scale-110 transition-transform duration-200 cursor-pointer opacity-80 hover:opacity-100'>
                 <i className='fas fa-archive' />
               </SmartLink>
 
-              <SmartLink title="搜索" href="/search" className='hover:scale-110 transition-all duration-200 cursor-pointer opacity-80 hover:opacity-100'>
+              <div 
+                title="搜索" 
+                onClick={() => searchModal?.current?.openSearch()} 
+                className='hover:scale-110 transition-transform duration-200 cursor-pointer opacity-80 hover:opacity-100'
+              >
                 <i className='fas fa-search' />
-              </SmartLink>
+              </div>
             </div>
           </div>
 
