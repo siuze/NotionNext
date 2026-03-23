@@ -10,8 +10,9 @@ const Logo = props => {
   const { siteInfo } = props
   return (
     <SmartLink href='/' passHref legacyBehavior>
-      <div className='flex flex-col justify-center items-center cursor-pointer space-y-3'>
-        <div className='font-medium text-lg p-1.5 rounded dark:border-white dark:text-white menu-link transform duration-200'>
+      <div className='my-nav-logo transform duration-200 hover:scale-105 flex flex-col justify-center items-center cursor-pointer space-y-3'>
+        <img className='my-icon' src='/favicon.ico'/>
+        <div className='my-icon-text font-medium text-lg rounded dark:border-white'>
           {' '}
           {siteInfo?.title || siteConfig('TITLE')}
         </div>

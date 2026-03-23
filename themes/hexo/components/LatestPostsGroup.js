@@ -1,4 +1,5 @@
 import LazyImage from '@/components/LazyImage'
+import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 // import Image from 'next/image'
 import SmartLink from '@/components/SmartLink'
@@ -30,7 +31,7 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
       {latestPosts.map(post => {
         const headerImage = post?.pageCoverThumbnail
           ? post.pageCoverThumbnail
-          : siteInfo?.pageCover
+          : '/post_cover/' + Math.floor(Math.random() * (siteConfig('RANDOMCOVERNUM', null) + 1)).toString() + '.avif'
         const selected = currentPath === post?.href
 
         return (

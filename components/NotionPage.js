@@ -118,7 +118,22 @@ const NotionPage = ({ post, className }) => {
 
   // const cleanBlockMap = cleanBlocksWithWarn(post?.blockMap);
   // console.log('NotionPage render with post:', post);
-
+  // 处理数据库icon渲染错误的问题
+  if (post.blockMap.block) {
+    const keys = Object.keys(post.blockMap.block).reverse()
+    let collectionId = null
+    for (let index = 0; index < keys.length; index++) {
+      if (post.blockMap.block[keys[index]].value && post.blockMap.block[keys[index]].value.collection_id) {
+        collectionId = post.blockMap.block[keys[index]].value.collection_id
+      }
+      if (post.blockMap.block[keys[index]].value && post.blockMap.block[keys[index]].value.type && !(post.blockMap.block[keys[index]].value.collection_id)) {
+        if (post.blockMap.block[keys[index]].value.type === 'collection_view' && collectionId) {
+          post.blockMap.block[keys[index]].value.id = collectionId
+          collectionId = null
+        }
+      }
+    }
+  }
   return (
     <div
       id='notion-article'
@@ -203,8 +218,8 @@ const autoScrollToHash = () => {
  * @returns
  */
 const mapPageUrl = id => {
-  // return 'https://www.notion.so/' + id.replace(/-/g, '')
-  return '/' + id.replace(/-/g, '')
+  // 如果 id 存在则处理，不存在则返回空字符串 ''
+  return id ? '/' + id.replace(/-/g, '') : ''
 }
 
 /**

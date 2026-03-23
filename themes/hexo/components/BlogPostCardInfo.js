@@ -61,9 +61,11 @@ export const BlogPostCardInfo = ({
 
         {/* 摘要 */}
         {(!showPreview || showSummary) && !post.results && (
+          <SmartLink href={post?.href} passHref>
           <main className='line-clamp-2 replace my-3 text-gray-700  dark:text-gray-300 text-sm font-light leading-7'>
             {post.summary}
           </main>
+          </SmartLink>
         )}
 
         {/* 搜索结果 */}

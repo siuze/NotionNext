@@ -37,7 +37,7 @@ const SocialButton = () => {
   const emailIcon = useRef(null)
 
   return (
-    <div className='w-full justify-center flex-wrap flex'>
+    <div className='w-full justify-center flex-wrap flex pb-2'>
       <div className='space-x-3 text-xl flex items-center text-gray-600 dark:text-gray-300 '>
         {CONTACT_GITHUB && (
           <a
@@ -106,8 +106,8 @@ const SocialButton = () => {
           <a
             target='_blank'
             rel='noreferrer'
-            title={'RSS'}
-            href={'/rss/feed.xml'}>
+            title={'邮件订阅与RSS'}
+            href={'/subscribe'}>
             <i className='transform hover:scale-125 duration-150 fas fa-rss dark:hover:text-indigo-400 hover:text-indigo-600' />
           </a>
         )}

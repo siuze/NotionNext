@@ -14,7 +14,7 @@ export function InfoCard(props) {
   const { className, siteInfo } = props
   const router = useRouter()
   return (
-        <Card>
+        <Card className={className}>
             <div
                 className='justify-center items-center flex pb-3 py-6 dark:text-gray-100  transform duration-200 cursor-pointer'
                 onClick={() => {

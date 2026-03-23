@@ -154,8 +154,18 @@ const Header = props => {
           'top-0 duration-300 transition-all  shadow-none fixed bg-none dark:bg-hexo-black-gray dark:text-gray-200 text-black w-full z-20 transform border-transparent dark:border-transparent'
         }>
         <div className='w-full flex justify-between items-center px-4 py-2'>
-          <div className='flex'>
+          <div className='flex items-center'>
             <Logo {...props} />
+            <div className='hidden md:flex items-center ml-4 space-x-5 text-lg'>
+
+              <SmartLink title="文章归档" href="/archive" className='hover:scale-110 transition-all duration-200 cursor-pointer opacity-80 hover:opacity-100'>
+                <i className='fas fa-archive' />
+              </SmartLink>
+
+              <SmartLink title="搜索" href="/search" className='hover:scale-110 transition-all duration-200 cursor-pointer opacity-80 hover:opacity-100'>
+                <i className='fas fa-search' />
+              </SmartLink>
+            </div>
           </div>
 
           {/* 右侧功能 */}

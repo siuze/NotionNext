@@ -34,49 +34,18 @@ export const MenuListTop = props => {
   ]
 
   if (customNav) {
-    // links = links.concat(customNav)
-    links = []
-    if (position === 'left') {
-      links = [
-        { id: 1, icon: 'fas fa-search', name: locale.NAV.SEARCH, to: '/search', show: true },
-        { id: 2, icon: 'fas fa-archive', name: locale.NAV.ARCHIVE, to: '/archive', show: true }
-        // { icon: 'fas fa-folder', name: locale.COMMON.CATEGORY, to: '/category', show: siteConfig('MENU_CATEGORY', null, CONFIG) },
-        // { icon: 'fas fa-tag', name: locale.COMMON.TAGS, to: '/tag', show: siteConfig('MENU_TAG', null, CONFIG) }
-      ]
-    }
-    for (let i = 0; i < customNav.length; i++) {
-      if (position === 'right') {
-        if (!(customNav[i].summary) || !(customNav[i].summary.startsWith('left'))) {
-          links.push(customNav[i])
-        }
-      } else {
-        if (customNav[i].summary && customNav[i].summary.startsWith('left')) {
-          links.push(customNav[i])
-        }
-      }
-    }
+    links = links.concat(customNav)
   }
 
-  // 如果 开启自定义菜单，则覆盖Page生成的菜单
-  if (siteConfig('CUSTOM_MENU') && customMenu) {
-    // links = customMenu
-    links = []
-    for (let i = 0; i < customMenu.length; i++) {
-      if (position === 'right') {
-        if (!(customMenu[i].summary) || !(customMenu[i].summary.startsWith('left'))) {
-          links.push(customMenu[i])
-        }
-      } else {
-        if (customMenu[i].summary && customMenu[i].summary.startsWith('left')) {
-          links.push(customMenu[i])
-        }
-      }
-    }
-  }
   for (let i = 0; i < links.length; i++) {
     if (links[i].id !== i) {
       links[i].id = i
     }
+  }
+
+  // 如果 开启自定义菜单，则覆盖Page生成的菜单
+  if (siteConfig('CUSTOM_MENU')) {
+    links = customMenu
   }
 
   if (!links || links.length === 0) {

@@ -35,7 +35,7 @@ export const MenuItemCollapse = props => {
           <SmartLink
             href={link?.href}
             target={link?.target}
-            className=' font-extralight flex justify-between pl-2 pr-4 dark:text-gray-200 no-underline tracking-widest pb-1'>
+            className=' font-extralight flex justify-between pl-2 pr-2 dark:text-gray-200 no-underline tracking-widest pb-1'>
             <span className=' transition-all items-center duration-200'>
               {link?.icon && <i className={link.icon + ' mr-4'} />}
               {link?.name}
@@ -45,7 +45,7 @@ export const MenuItemCollapse = props => {
         {hasSubMenu && (
           <div
             onClick={hasSubMenu ? toggleOpenSubMenu : null}
-            className='font-extralight flex items-center justify-between pl-2 pr-4 cursor-pointer  dark:text-gray-200 no-underline tracking-widest pb-1'>
+            className='font-extralight flex items-center justify-between pl-2 pr-2 cursor-pointer  dark:text-gray-200 no-underline tracking-widest pb-1'>
             <span className='transition-all items-center duration-200'>
               {link?.icon && <i className={link.icon + ' mr-4'} />}
               {link?.name}

@@ -7,31 +7,8 @@ import { useState } from 'react'
  */
 export const MenuItemDrop = ({ link }) => {
   const [show, changeShow] = useState(false)
-  const [pickColor, setPickColor] = useState("nav-menu-link");
   const hasSubMenu = link?.subMenus?.length > 0
-  useEffect(() => {
-    scrollTrigger()
-    window.addEventListener('scroll', scrollTrigger)
-    return () => {
-      window.removeEventListener('scroll', scrollTrigger)
-    }
-  }, [])
-  const router = useRouter()
 
-  const throttleMs = 200
-  const scrollTrigger = useCallback(throttle(() => {
-    const scrollS = window.scrollY
-    const header = document.querySelector('#header')
-    // 是否将导航栏透明
-    const navTransparent = (scrollS < document.documentElement.clientHeight - 12 && router.route === '/') || scrollS < 300 // 透明导航条的条件
-
-    if (header && navTransparent) {
-		setPickColor('nav-menu-link')
-    } else {
-		setPickColor('nav-menu-link-scroll')
-    }
-}, throttleMs)
-)
   if (!link || !link.show) {
     return null
   }

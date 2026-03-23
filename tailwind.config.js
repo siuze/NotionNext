@@ -77,7 +77,22 @@ module.exports = {
         'testimonial-btn': '0px 8px 15px 0px rgba(72, 72, 138, 0.08)',
         1: '0px 1px 3px 0px rgba(166, 175, 195, 0.40)',
         2: '0px 5px 12px 0px rgba(0, 0, 0, 0.10)'
-      }
+      },
+      keyframes: {
+        'soft-bounce': {
+          '0%, 100%': {
+            transform: 'translateY(-10%)', // 减小跳动幅度（默认是 -25%）
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+        },
+      },
+      animation: {
+        'slow-bounce': 'soft-bounce 3s infinite', // 增加时长到 3s（默认是 1s）
+      },
     }
   },
   variants: {

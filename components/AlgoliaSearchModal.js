@@ -266,7 +266,7 @@ export default function AlgoliaSearchModal({ cRef }) {
 
         <input
           type='text'
-          placeholder='在这里输入搜索关键词...'
+          placeholder='在这里输入搜索关键词并等待数秒....'
           onChange={e => handleInputChange(e)}
           onFocus={() => setIsInputFocused(true)} // 聚焦时
           onBlur={() => setIsInputFocused(false)} // 失去焦点时
@@ -330,7 +330,7 @@ export default function AlgoliaSearchModal({ cRef }) {
           </div>
           <div className='text-gray-600 dark:text-gray-300  text-right'>
             <span>
-              <i className='fa-brands fa-algolia'></i> Algolia 提供搜索服务
+              <i className='fa-brands fa-algolia'></i> Algolia {isLoading ? '已发起搜索……' : '提供搜索服务'}
             </span>
           </div>
         </div>

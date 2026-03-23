@@ -85,8 +85,8 @@ const Comment = ({ frontMatter, className }) => {
       {/* 延迟加载评论区 */}
       {!shouldLoad && (
         <div className='text-center'>
-          Loading...
           <i className='fas fa-spinner animate-spin text-3xl ' />
+          Loading...<br />首次访问加载时间较长，如果超过半分钟还未自动刷新页面，请尝试手动刷新。<br />也有可能自动刷新之后提示404并跳转回首页，这时可以再次尝试访问原页面，若页面确实存在，则此次应能访问。
         </div>
       )}
 

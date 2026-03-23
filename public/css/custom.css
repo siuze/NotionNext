@@ -1,221 +1,289 @@
 /* 静态文件导入 自定义样式*/
-@font-face {
-	font-family: "Iosevka";
-	src: local("Iosevka"), url("../webfonts/iosevka/iosevka.woff2") format("woff2");
-	font-display: swap;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Iosevka Aile Iaso";
-	src: local("Iosevka Aile Iaso"), url("https://cdn.xeiaso.net/static/pkg/iosevka/iosevka-aile-normal.woff2") format("woff2");
-	font-display: swap;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Optima";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-	src: local("Optima"), url("../webfonts/Optima/OPTIMA.woff") format("woff");
-  }
 
-@font-face {
-	font-family: "Optima Italic";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-	src: local("Optima Italic"),
-		url("../webfonts/Optima/Optima_Italic.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Optima Medium";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-	src: local("Optima Medium"),
-		url("../webfonts/Optima/Optima Medium.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Optima Bold";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-	src: local("Optima Bold"), url("../webfonts/Optima/OPTIMA_B.woff") format("woff");
-}
-
-#theme-fukasawa .sideLeft hr{
+#theme-fukasawa .sideLeft hr {
     opacity: .04;
 }
+
 .fa-info:before {
     content: "\f05a";
 }
-.my-header-h{
-	height:90%
-}
-.my_header{
-	/* font-weight: 600 */
-  }
-.my_header_banner{
-	margin-top: 4rem;
-	margin-bottom: 10rem;
-  }
-.my_passage_info{
-	margin-top: 2rem
-  }
-.my-article-header{
-	height: 18rem;
-}
-.my-px-24{
-	/* padding-left: 2rem; */
-	/* padding-right: 2rem; */
-}
-.my-index-card{
-	height: unset !important;
+
+@font-face {
+    font-family: "Iosevka";
+    src: local("Iosevka"), url("../webfonts/iosevka/iosevka.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
 }
 
-.MyPostCardImg{
-	max-height: 310px;
+@font-face {
+    font-family: "Iosevka Aile Iaso";
+    src: local("Iosevka Aile Iaso"), url("https://cdn.xeiaso.net/static/pkg/iosevka/iosevka-aile-normal.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
 }
-.MyPostCardImgShort{
-	max-height: 170px;
+
+@font-face {
+    font-family: "Optima";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+    src: local("Optima"), url("../webfonts/Optima/OPTIMA.woff") format("woff");
 }
-.my-right-side{
-	width: 15rem !important;
+
+@font-face {
+    font-family: "Optima Italic";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+    src: local("Optima Italic"),
+        url("../webfonts/Optima/Optima_Italic.woff") format("woff");
 }
+
+@font-face {
+    font-family: "Optima Medium";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+    src: local("Optima Medium"),
+        url("../webfonts/Optima/Optima Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Optima Bold";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+    src: local("Optima Bold"), url("../webfonts/Optima/OPTIMA_B.woff") format("woff");
+}
+
+#theme-fukasawa .sideLeft hr {
+    opacity: .04;
+}
+
+.fa-info:before {
+    content: "\f05a";
+}
+
+.my-header-h {
+    height: 90%
+}
+
+.my_header {
+    /* font-weight: 600 */
+}
+
+.my_header_banner {
+    margin-top: 4rem;
+    margin-bottom: 10rem;
+}
+
+.my_passage_info {
+    margin-top: 2rem
+}
+
+.my-article-header {
+    height: 18rem;
+}
+
+.my-px-24 {
+    /* padding-left: 2rem; */
+    /* padding-right: 2rem; */
+}
+
+.my-index-card {
+    height: unset !important;
+}
+
+.MyPostCardImg {
+    max-height: 310px;
+}
+
+.MyPostCardImgShort {
+    max-height: 170px;
+}
+
+.my-right-side {
+    width: 15rem !important;
+}
+
 #theme-hexo .menu-link {
-	text-decoration: none;
-	background-image: linear-gradient(rgb(99 102 241),rgb(99 102 241));
-	background-repeat: no-repeat;
-	background-position: bottom center;
-	background-size: 0 2px;
-	transition: background-size 100ms ease-in-out;
+    text-decoration: none;
+    background-image: linear-gradient(rgb(99 102 241), rgb(99 102 241));
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 0 2px;
+    transition: background-size 100ms ease-in-out;
 }
 
 #theme-hexo .menu-link:hover {
-	background-size: 100% 2px;
-	color: rgb(99 102 241);
+    background-size: 100% 2px;
+    color: rgb(99 102 241);
 }
-.nav-text-color{
-	/* color: rgb(240 249 255); */
+
+.nav-text-color {
+    /* color: rgb(240 249 255); */
 }
-.nav-text-color:hover{
-	color: rgb(240 249 255);
+
+.nav-text-color:hover {
+    color: rgb(240 249 255);
 }
-.nav-text-color-scroll{
-	/* color: rgb(240 249 255); */
+
+.nav-text-color-scroll {
+    /* color: rgb(240 249 255); */
 }
-.nav-text-color:hover{
-	color: rgb(99 102 241);;
+
+.nav-text-color:hover {
+    color: rgb(99 102 241);
+    ;
 }
-    /*  菜单下划线动画 */
+
+/*  菜单下划线动画 */
 #theme-hexo .nav-menu-link {
-	text-decoration: none;
-	background-image: linear-gradient(rgb(240 249 255),rgb(240 249 255));
-	background-repeat: no-repeat;
-	background-position: bottom center;
-	background-size: 0 2px;
-	transition: background-size 100ms ease-in-out;
+    text-decoration: none;
+    background-image: linear-gradient(rgb(240 249 255), rgb(240 249 255));
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 0 2px;
+    transition: background-size 100ms ease-in-out;
 }
 
 #theme-hexo .nav-menu-link:hover {
-	background-size: 100% 2px;
-	/* color: rgb(240 249 255); */
+    background-size: 100% 2px;
+    /* color: rgb(240 249 255); */
 }
+
 #theme-hexo .nav-menu-link-scroll {
-	text-decoration: none;
-	background-image: linear-gradient(rgb(99 102 241),rgb(99 102 241));
-	background-repeat: no-repeat;
-	background-position: bottom center;
-	background-size: 0 2px;
-	transition: background-size 100ms ease-in-out;
+    text-decoration: none;
+    background-image: linear-gradient(rgb(99 102 241), rgb(99 102 241));
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 0 2px;
+    transition: background-size 100ms ease-in-out;
 }
 
 #theme-hexo .nav-menu-link-scroll:hover {
-	background-size: 100% 2px;
-	color: rgb(99 102 241);
+    background-size: 100% 2px;
+    color: rgb(99 102 241);
 }
+
 .shadow-text {
-	text-shadow: 0.1em 0.1em 0.2em rgb(0 0 0 / 57%);
-  }
-.notion-page-link{
-	text-decoration: none !important;
+    text-shadow: 0.1em 0.1em 0.2em rgb(0 0 0 / 57%);
 }
-.no-border-bottom{
-	border-bottom: none !important;
+
+.notion-page-link {
+    text-decoration: none !important;
 }
+
+.no-border-bottom {
+    border-bottom: none !important;
+}
+
 .notion-collection-header-title {
-	align-items: baseline;
-  }
-.notion-external-title{
+    align-items: baseline;
+}
+
+.notion-external-title {
     border-bottom: none !important;
     text-decoration-line: underline;
     text-decoration-color: #d6d6d6;
 }
+
 .notion-list-disc {
-	list-style-type: revert;
-  }
-.notion-external-subtitle{
-	width: auto !important;
-	border-radius: 5px;
+    list-style-type: revert;
 }
-.notion-external-subtitle-item-desc{
-	width: max-content !important;
+
+.notion-external-subtitle {
+    width: auto !important;
+    border-radius: 5px;
 }
-.notion-external-subtitle-item-desc-svg{
-	width: 16px;
-	margin-right: 4px;
-	display: inline-flex
+
+.notion-external-subtitle-item-desc {
+    width: max-content !important;
 }
-.notion-external-subtitle-item{
-	display: inline-flex
+
+.notion-external-subtitle-item-desc-svg {
+    width: 16px;
+    margin-right: 4px;
+    display: inline-flex
 }
-.notion-external-image-icon{
-	border-radius: 50% !important;
+
+.notion-external-subtitle-item {
+    display: inline-flex
 }
+
+.notion-external-image-icon {
+    border-radius: 50% !important;
+}
+
 .notion-external-block {
-	align-items: center;
-	margin-bottom: 2px;
+    align-items: center;
+    margin-bottom: 2px;
     margin-top: 2px;
-  }
-.notion-external-subtitle-card{
-	line-height: normal;
 }
-.notion-external-subtitle-item-desc-svg-card{
+
+.notion-external-subtitle-card {
+    line-height: normal;
+}
+
+.notion-external-subtitle-item-desc-svg-card {
     left: 28px;
     position: absolute;
     filter: drop-shadow(white 0px 0px 1px) drop-shadow(white 0px 0px 1px) drop-shadow(white 0px 0px 1px);
     align-items: baseline;
 }
-.notion-external-image-card{
-	margin-right: 20px;
+
+.notion-external-image-card {
+    margin-right: 20px;
 }
-.notion-external-subtitle-item-name{
-	color: #37352fa6
+
+.notion-external-subtitle-item-name {
+    color: #37352fa6
 }
-.notion-external-subtitle-item-name-card{
-	font-size: 14px;
+
+.notion-external-subtitle-item-name-card {
+    font-size: 14px;
 }
-.notion{
-	font-family: "Iosevka Aile Iaso","HarmonyOS","HarmonyOS_Regular",
-    '"PingFang SC"',
-    '-apple-system',
-    'BlinkMacSystemFont',
-    '"Hiragino Sans GB"',
-    '"Microsoft YaHei"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-    '"Segoe UI"',
-    '"Noto Sans SC"',
-    'HarmonyOS_Regular',
-    '"Helvetica Neue"',
-    'Helvetica',
-    '"Source Han Sans SC"',
-    'Arial',
-    'sans-serif',
-    '"Apple Color Emoji"';
+
+.notion {
+    font-family: "Iosevka Aile Iaso", "HarmonyOS", "HarmonyOS_Regular",
+        '"PingFang SC"',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Hiragino Sans GB"',
+        '"Microsoft YaHei"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Segoe UI"',
+        '"Noto Sans SC"',
+        'HarmonyOS_Regular',
+        '"Helvetica Neue"',
+        'Helvetica',
+        '"Source Han Sans SC"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"';
 }
-code[class*=language-], pre[class*=language-]{
-	font-family: Iosevka, "Fira Code","Fira Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace !important;
+
+code[class*=language-],
+pre[class*=language-] {
+    font-family: Iosevka, "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace !important;
+}
+
+.my-nav-logo {
+    /* min-width: fit-content; */
+    flex-direction: row;
+}
+
+.my-icon {
+    margin-left: 20px;
+    height: 20px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    padding-top: 2px;
+}
+
+.my-icon-text {
+    min-width: max-content;
+    margin-top: 0px !important;
+    margin-right: 10px;
 }

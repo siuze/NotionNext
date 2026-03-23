@@ -31,9 +31,9 @@ const Hero = props => {
           changeType(
             new window.Typed('#typed', {
               strings: GREETING_WORDS,
-              typeSpeed: 200,
-              backSpeed: 100,
-              backDelay: 400,
+              typeSpeed: 50,
+              backSpeed: 50,
+              backDelay: 200,
               showCursor: true,
               smartBackspace: true
             })
@@ -60,13 +60,13 @@ const Hero = props => {
       id='header'
       style={{ zIndex: 1 }}
       className='w-full h-screen relative bg-black'>
-      <div className='text-white absolute bottom-0 flex flex-col h-full items-center justify-center w-full '>
+      <div className='my-header-h text-white absolute bottom-0 flex flex-col h-full items-center justify-center w-full '>
         {/* 站点标题 */}
-        <div className='font-black text-4xl md:text-5xl shadow-text'>
-          {siteInfo?.title || siteConfig('TITLE')}
+        <div className='my_header text-4xl md:text-5xl shadow-text'>
+          {siteInfo?.title || siteConfig('TITLE').replace(' ', ' ')}
         </div>
         {/* 站点欢迎语 */}
-        <div className='mt-2 h-12 items-center text-center font-medium shadow-text text-lg'>
+        <div className='my_header_banner mt-2 h-12 items-center text-center font-medium shadow-text text-lg'>
           <span id='typed' />
         </div>
 
@@ -79,11 +79,11 @@ const Hero = props => {
         <div
           onClick={scrollToWrapper}
           className='z-10 cursor-pointer w-full text-center py-4 text-3xl absolute bottom-10 text-white'>
-          <div className='opacity-70 animate-bounce text-xs'>
+          <div className='opacity-70 animate-slow-bounce text-xs'>
             {siteConfig('HEXO_SHOW_START_READING', null, CONFIG) &&
               locale.COMMON.START_READING}
           </div>
-          <i className='opacity-70 animate-bounce fas fa-angle-down' />
+          <i className='opacity-70 animate-slow-bounce fas fa-angle-down' />
         </div>
       </div>
 

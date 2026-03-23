@@ -63,6 +63,7 @@ class MyDocument extends Document {
 
           {/* 预先设置深色模式，避免闪烁 */}
           <script dangerouslySetInnerHTML={{ __html: darkModeScript }} />
+          <meta name="referrer" content="no-referrer" />
         </Head>
 
         <body>

@@ -24,7 +24,7 @@ export default function PostHero({ post, siteInfo }) {
   const headerImage = post?.pageCover ? post.pageCover : siteInfo?.pageCover
 
   return (
-    <div id='header' className='w-full h-96 relative md:flex-shrink-0 z-10'>
+    <div id='header' className='w-full h-64 relative md:flex-shrink-0 z-10'>
       <LazyImage
         priority={true}
         src={headerImage}
@@ -33,7 +33,7 @@ export default function PostHero({ post, siteInfo }) {
 
       <header
         id='article-header-cover'
-        className='bg-black bg-opacity-70 absolute top-0 w-full h-96 py-10 flex justify-center items-center '>
+        className='bg-black bg-opacity-60 absolute top-0 w-full h-64 py-10 flex justify-center items-center '>
         <div className='mt-10'>
           <div className='mb-3 flex justify-center'>
             {post.category && (
