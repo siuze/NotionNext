@@ -344,7 +344,8 @@ const nextConfig = {
   }
   ,
   experimental: {
-    // cpus: 1,
+    cpus: 1,
+    workerThreads: false, // 禁用构建时的多线程
     scrollRestoration: true,
     // 性能优化实验性功能
     optimizePackageImports: ['@heroicons/react', 'lodash']
